@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NETEXAMS</title>
+        <link rel="stylesheet" href="style/all.css">
+        <link rel="stylesheet" href="style/login.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <div>
+                    <img src="media/logo.png" alt="NETEXAMS">
+                    <h1>NETEXAMS</h1>
+                </div>
+            </a>
+                <div>
+                    <button id="botonLog"><img src="media/usuario.png" alt="usuario">Mi cuenta</button>
+                    <button id="botonLogOut"><img src="media/usuario.png" alt="usuario">Cerrar Sesion</button>
+                </div>
+        </header>
+        <main>
+            <div id="login">
+                <div class="btn-group">
+                    <input type="radio" id="iniciarSes" name="cuenta" class="radioInic" checked="checked">
+                    <label for="iniciarSes">Iniciar Sesion</label>
+                    <input type="radio" id="registrarSes" name="cuenta" class="radioInic">
+                    <label for="registrarSes">Crear Cuenta</label>
+                </div>
+                <div class="formulario">
+                    <form action="" id="iniciar" class="iniciar">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" id="usuario" name="usuario" required="required">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="contraseña" name="contraseña" required="required">
+                        <input id="checkIni" type="checkbox" name="sesionIni">
+                        <label id="sesionIni" for="sesionIni">Mantener sesión Iniciada</label>
+                        <button id="entrarWeb">Entrar</button>
+                    </form>
+                    <form action="" id="registrar" class="registrar">
+                        <label for="usuarioReg">Usuario</label>
+                        <input type="text" id="usuarioReg" name="usuairoReg" required="required">
+                        <label for="passwordReg">Contraseña</label>
+                        <input type="password" id="passwordReg" name="passwordReg" required="required" min="8">
+                        <select name="rol" id="rol-select" required="required">
+                            <option value="">--Por favor elige una opción--</option>
+                            <option value="alumno">Alumno</option>
+                            <option value="profesor">Profesor</option>
+                        </select>
+                        <input id="checkReg" type="checkbox" name="sesionIni" required>
+                        <label id="sesionReg" for="sesionIni">Aceptar
+                            <a href="politicas.html" target="_blank">Politicas de Privacias</a>
+                        </label>
+                        <button type="submit">Registrar</button>
+                    </form>
+                </div>
+            </div>
+            <div id="registrado">
+                <div>
+                    <h3>Tu registro ha sido informado</h3>
+                    <p>Espere hasta que un administrador verifice su sesion</p>
+                    <img src="media/logo.png" alt="espere">
+                    <button id="cerrar">Cerrar</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Web desarrollada por
+                <a href="https://luis1468.github.io/" target="_blank">Luis Liebanas</a>
+            </p>
+        </footer>
+    </body>
+    <script src="login.js"></script>
+    <script src="comprobarSesion.js"></script>
+</html>
